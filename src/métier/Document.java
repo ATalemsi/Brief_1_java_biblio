@@ -6,7 +6,7 @@ public abstract class Document {
     protected String datePublication;
     protected String titre;
     protected String nombre_pages;
-
+    protected boolean estEmprunte = false;
 
     public Document(int id, String auteur, String datePublication, String titre, String nombre_pages) {
         this.id = id;
@@ -49,11 +49,17 @@ public abstract class Document {
     public void setNombre_pages(String nombre_pages) {
         this.nombre_pages = nombre_pages;
     }
+    public boolean GetEstEmprunte() {
+        return estEmprunte;
+    }
+    public void setEstEmprunte(boolean estEmprunte) {
+        this.estEmprunte = estEmprunte;
+    }
     // fin geter and seters
 
-    public abstract void emprunter();
-    public abstract void afficher_details();
-    public abstract void retourner();
+    public abstract boolean emprunter();
+    public abstract boolean retourner();
+    public  abstract  void afficher();
 
 
 }
