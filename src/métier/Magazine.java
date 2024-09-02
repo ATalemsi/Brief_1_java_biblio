@@ -1,17 +1,13 @@
 package métier;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Magazine extends Document {
     private int numero;
-    private boolean estEmprunte = false;  // Indique si le livre est emprunté
-    private LocalDate dateEmprunt;
-    public static ArrayList<Magazine> magazines = new ArrayList<Magazine>();
+    private boolean estEmprunte ;
 
-    public Magazine(int numero ,int id , String auteur,String datePublication, String titre ,String nombre_pages ) {
-        super(id, auteur, datePublication, titre, nombre_pages);
+    public Magazine(int numero , int id , String auteur, LocalDate datePublication, String titre , String nombre_pages ) {
+        super(id, auteur,datePublication, titre, nombre_pages);
          this.numero = numero;
     }
     public int getNumero() {
@@ -21,27 +17,31 @@ public class Magazine extends Document {
         this.numero = numero;
     }
 
-    public boolean isEstEmprunte() {
-        return estEmprunte;
-    }
+
     @Override
-    public boolean emprunter() {
-
-
+    public void emprunter() {
+        System.out.println(" le magazine a été emprunter");
     }
 
 
     @Override
-    public boolean retourner() {
-
+    public void retourner() {
+        System.out.println(" le magazine a été retourner");
     }
-
 
     @Override
-    public void afficher() {
-        for (Magazine magazine : magazines) {
-            magazine.afficher_details();
-            System.out.println("------------------");
-        }
+    public void afficher_Details() {
+        System.out.println("Magazine:");
+        System.out.println("ID: " + getId());
+        System.out.println("Titre: " + getTitre());
+        System.out.println("Auteur: " + getAuteur());
+        System.out.println("Date de Publication: " + getDatePublication());
+        System.out.println("Nombre de Pages: " + getNombre_pages());
+        System.out.println("ISBN: " + getNumero());
+        System.out.println("-> : " + (estEmprunte ? "Emprunté" : "Disponible"));
     }
+
 }
+
+
+

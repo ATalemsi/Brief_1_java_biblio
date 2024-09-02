@@ -1,14 +1,18 @@
 package métier;
 
+import utilitaire.DateUtils;
+
+import java.time.LocalDate;
+
 public abstract class Document {
     protected int id;
     protected String auteur;
-    protected String datePublication;
+    protected LocalDate datePublication;
     protected String titre;
     protected String nombre_pages;
     protected boolean estEmprunte = false;
 
-    public Document(int id, String auteur, String datePublication, String titre, String nombre_pages) {
+    public Document(int id, String auteur, LocalDate datePublication, String titre, String nombre_pages) {
         this.id = id;
         this.auteur = auteur;
         this.datePublication = datePublication;
@@ -31,11 +35,13 @@ public abstract class Document {
     public void setAuteur(String auteur) {
         this.auteur = auteur;
     }
-    public String getDatePublication() {
-        return datePublication;
+
+
+    public String getFormattedDatePublication() {
+        return DateUtils.date2(datePublication);
     }
-    public void setDatePublication(String datePublication) {
-        this.datePublication = datePublication;
+    public LocalDate getDatePublication() {
+        return datePublication;
     }
     public String getTitre() {
         return titre;
@@ -57,9 +63,9 @@ public abstract class Document {
     }
     // fin geter and seters
 
-    public abstract boolean emprunter();
-    public abstract boolean retourner();
-    public  abstract  void afficher();
+    public abstract void emprunter();
+    public abstract void retourner();
+    public  abstract  void afficher_Details();
 
 
 }
