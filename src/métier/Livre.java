@@ -36,7 +36,7 @@ public class Livre extends Document {
 
     @Override
     public void afficher_Details() {
-        System.out.println("Livre:");
+        System.out.println("===========Livre==========:");
         System.out.println("ID: " + getId());
         System.out.println("Titre: " + getTitre());
         System.out.println("Auteur: " + getAuteur());
@@ -44,6 +44,7 @@ public class Livre extends Document {
         System.out.println("Nombre de Pages: " + getNombre_pages());
         System.out.println("ISBN: " + getIsbn());
         System.out.println("->: " + (estEmprunte ? "Emprunté" : "Disponible"));
+        System.out.println("-------------------------------------------");
 
     }
 }

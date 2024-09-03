@@ -32,6 +32,7 @@ public class ConsoleUI {
             System.out.println("6. Quitter");
             System.out.println("Enter ton option(1-6): ");
             option = scanner.nextInt();
+            scanner.nextLine();
 
 
             switch (option) {
@@ -103,12 +104,12 @@ public class ConsoleUI {
 
         LocalDate date_publication = null;
         do {
-            System.out.println("Veuiller saisir la date de publication (au format dd-MM-yyyy) :");
+            System.out.println("Veuiller saisir la date de publication (au format dd/MM/yyyy) :");
             String date = scanner.nextLine();
             try {
                 date_publication = DateUtils.date(date);
             } catch (DateTimeException e) {
-                System.out.println("Format de date invalide. Veuillez entrer une date valide au format dd-MM-yyyy." + e.getMessage());
+                System.out.println("Format de date invalide. Veuillez entrer une date valide au format dd/MM/yyyy." + e.getMessage());
             }
         } while (date_publication == null);
 
@@ -184,7 +185,7 @@ public class ConsoleUI {
 
     private void rechercherDocument() {
         System.out.print("Entrez le titre du document a rechercher : ");
-        String titre = scanner.nextLine();
+        String titre = scanner.nextLine().trim(); // Trim spaces
         Document document = bibliotheque.rechercher(titre);
         if (document != null) {
             document.afficher_Details();

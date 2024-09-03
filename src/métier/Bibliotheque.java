@@ -1,9 +1,10 @@
 package métier;
+
 import java.util.*;
 
 public class Bibliotheque {
     private List<Document> documents;
-    private Map<String,Document> searchDocs;
+    private Map<String, Document> searchDocs;
 
     public Bibliotheque() {
         this.documents = new ArrayList<>();
@@ -13,10 +14,12 @@ public class Bibliotheque {
 
     public void ajouter(Document document) {
         this.documents.add(document);
-        this.searchDocs.put(document.getTitre(), document);
+        this.searchDocs.put(document.getTitre().trim().toLowerCase(), document);
+        System.out.println("Document added with title: " + document.getTitre().trim().toLowerCase());
     }
+
     public Document rechercher(String titre) {
-        return searchDocs.get(titre);
+        return searchDocs.get(titre.trim().toLowerCase());
     }
 
 

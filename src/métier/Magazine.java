@@ -31,7 +31,7 @@ public class Magazine extends Document {
 
     @Override
     public void afficher_Details() {
-        System.out.println("Magazine:");
+        System.out.println("=====================Magazine====================:");
         System.out.println("ID: " + getId());
         System.out.println("Titre: " + getTitre());
         System.out.println("Auteur: " + getAuteur());
@@ -39,6 +39,7 @@ public class Magazine extends Document {
         System.out.println("Nombre de Pages: " + getNombre_pages());
         System.out.println("ISBN: " + getNumero());
         System.out.println("-> : " + (estEmprunte ? "Emprunté" : "Disponible"));
+        System.out.println("-----------------------------------");
     }
 
 }
