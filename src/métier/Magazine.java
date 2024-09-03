@@ -17,7 +17,7 @@ public class Magazine extends Document {
         this.numero = numero;
     }
 
-
+    //les commantaires
     @Override
     public void emprunter() {
         System.out.println(" le magazine a été emprunter");
@@ -39,7 +39,7 @@ public class Magazine extends Document {
         System.out.println("Nombre de Pages: " + getNombre_pages());
         System.out.println("ISBN: " + getNumero());
         System.out.println("-> : " + (estEmprunte ? "Emprunté" : "Disponible"));
-        System.out.println("-----------------------------------");
+        System.out.println("--------------------------------------");
     }
 
 }
