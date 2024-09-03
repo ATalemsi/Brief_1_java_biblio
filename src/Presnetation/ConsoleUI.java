@@ -15,6 +15,7 @@ public class ConsoleUI {
     private Scanner scanner;
 
 
+
     public ConsoleUI() {
         bibliotheque = new Bibliotheque();
         scanner = new Scanner(System.in);
@@ -73,17 +74,6 @@ public class ConsoleUI {
             scanner.nextLine();
         } while (type != 1 && type != 2);
 
-        int id;
-        do {
-            System.out.println("Veuiller saisir le ID :");
-            while (!scanner.hasNextInt()) {
-                System.out.println("Entrée invalide. Veuillez saisir un numéro valide pour l'ID :");
-                scanner.next(); // Consommer l'entrée incorrecte
-            }
-            id = scanner.nextInt();
-            scanner.nextLine();
-        } while (id <= 0);
-
         System.out.println("Veuiller saisir le titre :");
         String title;
         do {
@@ -134,7 +124,7 @@ public class ConsoleUI {
                 scanner.nextLine();
             } while (isbn <= 0);
 
-            Livre livre = new Livre(isbn, id, author, date_publication, title, nombre_Pages);
+            Livre livre = new Livre(isbn,0, author, date_publication, title, nombre_Pages);
             bibliotheque.ajouter(livre);
             System.out.println("Le livre a été créé avec succès.");
         } else if (type == 2) {
@@ -149,7 +139,7 @@ public class ConsoleUI {
                 scanner.nextLine();
             } while (numero <= 0);
 
-            Magazine magazine = new Magazine(numero, id, author, date_publication, title, nombre_Pages);
+            Magazine magazine = new Magazine(numero,0, author, date_publication, title, nombre_Pages);
             bibliotheque.ajouter(magazine);
             System.out.println("Le magazine a été créé avec succès.");
         }
