@@ -121,11 +121,11 @@
     </custom-types>
   </types>
   <items>
-    <item id="4f5b74b49f1b4abea6118de2f471aa9e" cid="PROP042" type="property" name="1.*" owner="29860584d6b7454ea87d4e63d33290c3" creator="" creation-date="09/04/2024 15:25:38" visibility="undefined">
+    <item id="4f5b74b49f1b4abea6118de2f471aa9e" cid="PROP042" type="property" owner="29860584d6b7454ea87d4e63d33290c3" creator="" creation-date="09/04/2024 15:25:38" visibility="private">
       <structural-feature type="Document" type-id="Class:0d5fbdc493c84f06a57456e26a24fc45" />
       <property aggregation="shared" />
     </item>
-    <item id="dc6120ee4add4434a419fbf609a066f1" cid="PROP043" type="property" name="1.1" owner="29860584d6b7454ea87d4e63d33290c3" creator="" creation-date="09/04/2024 15:25:38" visibility="undefined">
+    <item id="dc6120ee4add4434a419fbf609a066f1" cid="PROP043" type="property" owner="29860584d6b7454ea87d4e63d33290c3" creator="" creation-date="09/04/2024 15:25:38" visibility="private">
       <structural-feature type="Bibliotique" type-id="Class:09d3006e54904d25aede800b238e5684" />
     </item>
   </items>
@@ -143,7 +143,7 @@
       </meta>
       <abstract-items />
       <sub-models />
-      <diagram type="uml-class" id="pd014be185258427da9797c6518b3119b_293080571" name="ClassDiagram1" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-125,26">
+      <diagram type="uml-class" id="pd014be185258427da9797c6518b3119b_293080571" name="ClassDiagram1" order-index="1" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-219,22">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -269,15 +269,15 @@
             <relation from="6f7d049102b44a7bbb25e17fc479dd55" from-iid="a39ee2661e964a3ba6e94d8fd66c6b0a" to="0d5fbdc493c84f06a57456e26a24fc45" to-iid="debb6a6a13444e3f8ab55806794bd296" />
           </item>
           <item id="09d3006e54904d25aede800b238e5684" iid="3c169d09106946a5998e2c2c40c5bfc7" show-fields="true" creation-date="09/04/2024 15:00:29" order-index="5" type="entity">
-            <layout ax="-40" ay="77" awidth="140" aheight="160" x="-40" y="77" width="140" height="160" />
+            <layout ax="74" ay="72" awidth="140" aheight="160" x="66" y="72" width="140" height="160" />
             <classifier />
             <class />
           </item>
           <item id="29860584d6b7454ea87d4e63d33290c3" iid="b6769ac4388e46398c2b2f9743a35726" creation-date="09/04/2024 15:25:38" order-index="6" type="relation">
-            <layout start-role-position="30,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-to-fields="false" auto-path="" x1="307" y1="157" x2="100" y2="157" start-border-pos="0.875" end-border-pos="0.375" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" start-multiplicity-position="25,-15" end-multiplicity-position="25,15" line-style="oblique" lock-to-fields="false" auto-path="" x1="307" y1="155" x2="214" y2="153" start-border-pos="0.8774370284307571" end-border-pos="0.37698142528533934" name-position="0,20">
               <points>
-                <point x="307" y="157" />
-                <point x="100" y="157" />
+                <point x="307" y="155" />
+                <point x="214" y="153" />
               </points>
             </layout>
             <relation from="0d5fbdc493c84f06a57456e26a24fc45" from-iid="debb6a6a13444e3f8ab55806794bd296" to="09d3006e54904d25aede800b238e5684" to-iid="3c169d09106946a5998e2c2c40c5bfc7" />
